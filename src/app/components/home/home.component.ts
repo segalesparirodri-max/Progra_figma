@@ -29,6 +29,8 @@ import { RouterLink } from '@angular/router';
         </div>
       </div>
 
+      <button class="btn-outline" routerLink="/registro">Crear una cuenta</button>
+
       <div class="action-buttons">
         <button class="btn-primary" routerLink="/acceso">Iniciar sesión <span>→</span></button>
         <button class="btn-outline">Crear una cuenta</button>

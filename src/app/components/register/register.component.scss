@@ -1,0 +1,117 @@
+$primary-color: #1b5e3d;
+$border-color: #e2e8e4;
+
+.tab-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.badge-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #e6f4ed;
+  color: $primary-color;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #4b5563;
+  margin-top: -6px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 100%;
+        padding: 9px 12px 9px 36px;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        font-size: 13px;
+        outline: none;
+
+        &:focus {
+          border-color: $primary-color;
+          box-shadow: 0 0 0 3px rgba(27, 94, 61, 0.1);
+        }
+      }
+
+      .input-icon {
+        position: absolute;
+        left: 10px;
+        color: #9ca3af;
+      }
+
+      .eye-icon {
+        position: absolute;
+        right: 10px;
+        color: #9ca3af;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+
+  button {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    color: #fff;
+    &:hover { background-color: #14472e; }
+  }
+
+  .btn-outline {
+    background-color: #fff;
+    color: $primary-color;
+    border: 1px solid $border-color;
+    &:hover { background-color: #f8faf8; }
+  }
+}

@@ -9,7 +9,9 @@
     <div class="form-group">
       <label>Correo electrónico</label>
       <div class="input-wrapper">
-        <span class="input-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+        <span class="input-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </span>
         <input type="email" [(ngModel)]="email" name="email" placeholder="hola@ejemplo.com" required>
       </div>
     </div>
@@ -17,20 +19,31 @@
     <div class="form-group">
       <label>Contraseña</label>
       <div class="input-wrapper">
-        <span class="input-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
+        <span class="input-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </span>
         <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" name="password" required>
-        <span class="eye-icon" (click)="togglePasswordVisibility()"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+        <span class="eye-icon" (click)="togglePasswordVisibility()">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </span>
       </div>
     </div>
 
     <div class="form-row-options">
-      <label class="checkbox-label"><input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe"> <span>Recordarme</span></label>
+      <label class="checkbox-label">
+        <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe">
+        <span>Recordarme</span>
+      </label>
       <a href="#" class="forgot-link" (click)="$event.preventDefault()">¿Olvidaste tu clave?</a>
     </div>
 
     <div class="action-buttons">
-      <button type="submit" class="btn-primary">Iniciar sesión <span>→</span></button>
-      <button type="button" class="btn-outline">Crear una cuenta</button>
+      <button type="submit" class="btn-primary">
+        Iniciar sesión <span>→</span>
+      </button>
+      <button type="button" class="btn-outline" routerLink="/registro">
+        Crear una cuenta
+      </button>
     </div>
   </form>
 </div>

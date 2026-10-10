@@ -1,0 +1,66 @@
+<div class="tab-pane">
+  <div class="badge-icon">
+    <!-- Icono de usuario con signo más -->
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="8.5" cy="7" r="4"></circle>
+      <line x1="20" y1="8" x2="20" y2="14"></line>
+      <line x1="23" y1="11" x2="17" y2="11"></line>
+    </svg>
+  </div>
+  <h2>Crear cuenta</h2>
+  <p class="subtitle">Crea tu cuenta para empezar en nexo.</p>
+
+  <form (ngSubmit)="onSubmitRegister()" class="login-form">
+
+    <!-- Correo electrónico -->
+    <div class="form-group">
+      <label>Correo electrónico</label>
+      <div class="input-wrapper">
+        <span class="input-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </span>
+        <input type="email" [(ngModel)]="email" name="email" placeholder="hola@ejemplo.com" required>
+      </div>
+    </div>
+
+    <!-- Contraseña -->
+    <div class="form-group">
+      <label>Contraseña</label>
+      <div class="input-wrapper">
+        <span class="input-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </span>
+        <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" name="password" required>
+        <span class="eye-icon" (click)="togglePasswordVisibility()">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </span>
+      </div>
+    </div>
+
+    <!-- Confirmar Contraseña -->
+    <div class="form-group">
+      <label>Confirmar contraseña</label>
+      <div class="input-wrapper">
+        <span class="input-icon">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </span>
+        <input [type]="showConfirmPassword ? 'text' : 'password'" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+        <span class="eye-icon" (click)="toggleConfirmPasswordVisibility()">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </span>
+      </div>
+    </div>
+
+    <!-- Botones de Acción -->
+    <div class="action-buttons">
+      <button type="submit" class="btn-primary">
+        Crear cuenta <span>→</span>
+      </button>
+      <button type="button" class="btn-outline" routerLink="/acceso">
+        Volver a iniciar sesión
+      </button>
+    </div>
+
+  </form>
+</div>
