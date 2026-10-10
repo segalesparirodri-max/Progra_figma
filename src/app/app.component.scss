@@ -1,0 +1,126 @@
+$primary-color: #1b5e3d;
+$border-color: #e2e8e4;
+$text-muted: #4b5563;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.modal-backdrop {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  padding: 20px;
+}
+
+.modal-container {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid $border-color;
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+
+    .logo-icon {
+      background-color: $primary-color;
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brand-name { font-weight: 700; color: #111; }
+    .divider { color: #9ca3af; }
+    .page-title { color: $text-muted; }
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    &:hover { background-color: #f3f4f6; }
+  }
+}
+
+.tabs-container {
+  display: flex;
+  background-color: #f4f7f5;
+  padding: 12px 20px;
+  gap: 8px;
+  border-bottom: 1px solid $border-color;
+
+  .tab-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $text-muted;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    svg { color: #6b7280; }
+
+    &:hover {
+      background-color: #e6efe8;
+      color: $primary-color;
+      svg { color: $primary-color; }
+    }
+
+    &.active {
+      background-color: #ffffff;
+      color: $primary-color;
+      font-weight: 600;
+      border-color: #d1ded5;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      svg { color: $primary-color; }
+    }
+  }
+}
+
+.card-content { padding: 24px; }
+
+.modal-footer-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  background-color: #fafbfc;
+  border-top: 1px solid $border-color;
+  font-size: 11px;
+  color: #6b7280;
+}
